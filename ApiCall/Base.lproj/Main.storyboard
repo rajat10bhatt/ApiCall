@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mM2-Vh-Pc9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="586"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductTableViewCell" rowHeight="163" id="w3V-CA-vfZ" customClass="ProductTableViewCell" customModule="ApiCall" customModuleProvider="target">
@@ -80,13 +80,23 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fQp-Br-AAM"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DAH-b6-9uJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CjO-JZ-uho"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mM2-Vh-Pc9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DI0-GS-edm"/>
+                            <constraint firstItem="mM2-Vh-Pc9" firstAttribute="top" secondItem="DAH-b6-9uJ" secondAttribute="bottom" constant="5" id="AZd-Zi-71Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mM2-Vh-Pc9" secondAttribute="trailing" id="Dsy-Be-pAE"/>
+                            <constraint firstItem="DAH-b6-9uJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EhR-d6-AEL"/>
+                            <constraint firstItem="DAH-b6-9uJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F3k-XC-4Qn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mM2-Vh-Pc9" secondAttribute="bottom" id="Ip4-79-pge"/>
                             <constraint firstItem="mM2-Vh-Pc9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nay-vP-0wQ"/>
+                            <constraint firstItem="DAH-b6-9uJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="svC-K2-hZh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

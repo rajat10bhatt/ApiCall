@@ -19,3 +19,12 @@ extension CGFloat {
         return CGFloat(arc4random()) / CGFloat(UInt32.max)
     }
 }
+
+extension String {
+    static var spaceString: String {
+        return " "
+    }
+    static var emptyString: String {
+        return ""
+    }
+}
